@@ -10,3 +10,21 @@ img{
 	max-width: 100%;	
 	height: auto;
 }
+a:link{
+	color: #FFFFFF;
+	text-decoration:none;
+}
+a:visited{
+	color: #EEEEEE;
+	text-decoration:none;
+}
+a:hover{
+	color: #00DD00;
+	text-decoration:underline;
+}
+a:active{
+	color: #FF0000;
+	text-decoration:underline;
+}
+
+
