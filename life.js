@@ -120,15 +120,16 @@ function main(){
 	let curr = createBoard(height, width);
 	let next = createBoard(height, width);
 	randomFill(curr);
-	//scrn.innerText = stringifyBoard(curr);
+	let generation = 1;
 
 	setInterval(
 		() => {
-			scrn.innerText = stringifyBoard(curr);	
+			scrn.innerText = `Generation:${generation}\n${stringifyBoard(curr)}`;	
 			update(curr, next);
 			let tmp = curr;
 			curr = next;
 			next = tmp ; 
+			generation++;
 		}
 	, 200);
 
