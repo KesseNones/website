@@ -1,3 +1,5 @@
+let gameInterval = null;
+
 const scrn = document.getElementById("leif");
 //pre.innerText = "Hey, Alien fuck off! Fuck you, alien! Suck my dick!";
 
@@ -115,14 +117,14 @@ function update(curr, next){
 }
 
 function main(){
-	const height = randRange(10, 64);
-	const width = randRange(10, 64);
+	const height = randRange(1, 64);
+	const width = randRange(1, 64);
 	let curr = createBoard(height, width);
 	let next = createBoard(height, width);
 	randomFill(curr);
 	let generation = 1;
 
-	setInterval(
+	gameInterval = setInterval(
 		() => {
 			scrn.innerText = `Generation:${generation}\n${stringifyBoard(curr)}`;	
 			update(curr, next);
@@ -134,6 +136,17 @@ function main(){
 	, 200);
 
 }
+
+//Resets the life game when restart button pressed.
+document.getElementById("restart").addEventListener("click", () => {
+	clearInterval(gameInterval);
+	main();
+});
+
+//Stops game when stop button pressed.
+document.getElementById("stop").addEventListener("click", () => {
+	clearInterval(gameInterval);
+});
 
 main();
 
