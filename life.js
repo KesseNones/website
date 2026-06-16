@@ -148,5 +148,10 @@ document.getElementById("stop").addEventListener("click", () => {
 	clearInterval(gameInterval);
 });
 
+//Stops game when stop button pressed.
+document.getElementById("clear").addEventListener("click", () => {
+	scrn.innerText = "";		
+});
+
 main();
 
