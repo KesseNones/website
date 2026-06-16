@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Receipt Processor</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+<a href="/">Table of Contents</a> 
+>>
+<a href="projects.html">Projects</a>
+<hr>
+
+<h1>Fetch Dockerized Receipt Processor</h1>
+
+<hr>
+
+<p>
+A project created for Fetch as part of their backend exercise. It utilizes the Go programming language to implement HTTP endpoints that can be queried using curl or other tools such as web browsers.
+</p>
+
+<p>
+This project employs Docker to build and run the server in a containerized environment, making it more usable across platforms, provided the host has a recent Docker version installed.
+</p>
+
+<p>
+The endpoints implemented are /receipts/process and /receipts/{id}/points.
+</p>
+
+<p>
+/receipts/process takes a POST request that contains a receipt JSON. This JSON is parsed by the server to determine how many points it's worth, based on a set of arbitrary rules provided by Fetch. This point value is then stored in a hashmap with a generated UUID as the key and the calculated points as the value. This database is stored in memory because Fetch instructed it to be that way. Once stored, a JSON containing the generated ID is returned to the user like so: {"id": "23423d-23dd2-d23d-23d-23dddd"}. If the receipt is formatted wrong in some way, an error is returned to the user.
+</p>
+
+<p>
+/receipts/{id}/points takes a GET requst with the URL containing a generated ID. If this ID is valid, it is used to query the hashmap to find the point value associated with the key. If the key exists, a JSON containing the number of points associated with that ID is returned like so: {"points": 42}. If the ID doesn't exist, an error is returned to the user indicating as such.
+</p>
+
+<p>
+This project gave me a significant improvement to my understanding of Docker and is a good showcase of my understanding of basic HTTP endpoints to access pseudo-databases.
+</p>
+
+<h2>
+<a href="https://github.com/KesseNones/FetchBackendExercise">Full GitHub Page</a>
+</h2>
+
+<hr>
+
+</body>
+
+</html>
