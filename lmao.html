@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Lmao</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+<a href="/">Table of Contents</a> 
+>>
+<a href="projects.html">Projects</a>
+<hr>
+
+<h1>Lmao Programming Language</h1>
+
+<hr>
+<p>
+This project is the spritual successor to the EcksDee programming language. While EcksDee was fun to make, I hit several bottlenecks in performance with Haskell that prompted the switch. 
+</p>
+
+<p>
+Unlike EcksDee, Lmao uses Rust as its base. Rust is used for both interpretation as well as compilation (more like transpilation) of Lmao. For interpretation, it builds out an AST of Lmao and then runs the program in one go. The interpreter can be run on a .lmao file, fed a program from stdin, or run directly as a REPL for quicker access. Rust's work of compiling it is brute force but it does work. It translates Lmao code into an AST, then generates Rust code equivalent to the AST before having rustc handle the compilation. 
+</p>
+
+<p>
+	The language of Lmao itself is a postfix notation language inspired by Forth with notable deviations into its own style. It works on the idea that everything is an operand or operator that changes the state of the program. It's a fun little language that has done some rather neat things.
+</p>
+
+<p>
+Below is a link to the full GitHub page with much more in-depth documentation as well as the source code.
+</p>
+
+<h2>
+<a href="https://github.com/KesseNones/LmaoProgrammingLanguage">Full GitHub Page</a>
+</h2>
+
+<hr>
+
+</body>
+
+</html>
