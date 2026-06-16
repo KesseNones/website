@@ -27,4 +27,20 @@ a:active{
 	text-decoration:underline;
 }
 
+.butt{
+	background: #1a1a1a;
+	color: #FFFFFF;
+	padding: 12px 12px;
+	font-weight:bold;
+	border-radius: 2px;
+	cursor: pointer;
+}
 
+.butt:hover{
+	color: #00DD00;
+	border-color: #00DD00;
+}
+.butt:active{
+	color: #FF0000;
+	border-color: #FF0000;
+}
