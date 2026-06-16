@@ -1,7 +1,6 @@
 let gameInterval = null;
 
 const scrn = document.getElementById("leif");
-//pre.innerText = "Hey, Alien fuck off! Fuck you, alien! Suck my dick!";
 
 //Randomly returns an integer in a desired range.
 function randRange(min, max){
